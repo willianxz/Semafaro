@@ -103,18 +103,18 @@ function draw() {
           this.ligar = function(){
               
                
-              if(tempo > 0){ 
-                  this.verde = true;
+              if(tempo > 0){                   
+                  this.vermelho = true;
               }              
               
               if(tempo > 150){ 
-                  this.verde = false;
+                  this.vermelho = false;
                   this.laranja = true;
               }              
               
               if(tempo > 250){
                   this.laranja = false;
-                  this.vermelho = true;
+                  this.verde = true;
               }              
               
               if(tempo === 350){
