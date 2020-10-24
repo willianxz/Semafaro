@@ -102,32 +102,22 @@ function draw() {
       //Esse nosso método é para ligar o nosso Semáfaro
          this.ligar = function(){
               
-               //Se o tempo for acima de 100, 'ligue' o vermelho.
-              if(tempo > 0){ 
-                  this.red = true;
-                  this.laranja = false;
-                  this.verde = false;                  
-              }
-              
-              //Se o tempo for acima de 300, 'ligue' o verde e 'apague' o vermelho.
-              if(tempo > 150){ 
+                if(tempo == 350){
+                   this.desligar();
+                }else if(tempo > 250){
                   this.red = false;
                   this.laranja = true;
-                  this.verde = false;    
-              }
-              
-              //Se o tempo for acima de 500, 'ligue' o laranja e 'apague' o verde.
-              if(tempo > 250){
+                  this.verde = false; 
+                }else if(tempo > 150){
                   this.red = false;
+                  this.laranja = true;
+                  this.verde = false; 
+                }else{
+                  this.red = true;
                   this.laranja = false;
-                  this.verde = true; 
-              }
-              
-              //Se o tempo for acima de 700, reiniciaremos a nossa apresentação do Semáfaro
-              if(tempo === 350){
-                  this.desligar(); //Usamos o método interno para desligar nosso Semáfaro.
-              }
-              
+                  this.verde = false;  
+                }
+
       }
       
        //Aqui esta o nosso método para desligar o nosso Semáfaro
