@@ -102,20 +102,20 @@ function draw() {
       //Esse nosso método é para ligar o nosso Semáfaro
          this.ligar = function(){
               
-                if(tempo == 350){
-                   this.desligar();
-                }else if(tempo > 250){
+                if(tempo > 300 && tempo < 450){                  
                   this.red = false;
-                  this.laranja = true;
-                  this.verde = false; 
+                  this.laranja = false;
+                  this.verde = true; 
                 }else if(tempo > 150){
                   this.red = false;
                   this.laranja = true;
                   this.verde = false; 
-                }else{
+                }else if(tempo > 0){
                   this.red = true;
                   this.laranja = false;
-                  this.verde = false;  
+                  this.verde = false; 
+                }else{                  
+                  this.desligar(); 
                 }
 
       }
