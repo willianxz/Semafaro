@@ -104,19 +104,23 @@ function draw() {
               
                //Se o tempo for acima de 100, 'ligue' o vermelho.
               if(tempo > 0){ 
-                  this.verde = true;
+                  this.red = true;
+                  this.laranja = false;
+                  this.verde = false;                  
               }
               
               //Se o tempo for acima de 300, 'ligue' o verde e 'apague' o vermelho.
               if(tempo > 150){ 
-                  this.verde = false;
+                  this.red = false;
                   this.laranja = true;
+                  this.verde = false;    
               }
               
               //Se o tempo for acima de 500, 'ligue' o laranja e 'apague' o verde.
               if(tempo > 250){
+                  this.red = false;
                   this.laranja = false;
-                  this.vermelho = true;
+                  this.verde = true; 
               }
               
               //Se o tempo for acima de 700, reiniciaremos a nossa apresentação do Semáfaro
